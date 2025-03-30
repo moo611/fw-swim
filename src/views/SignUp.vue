@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div>
-      <h1 style="color: white; margin-bottom: 20px;">水叮当</h1>
+      <h1 style="color: white; margin-bottom: 20px;">军泳智控</h1>
     </div>
     <div class="card-bottom">
       <el-form class="form" :model="form" label-width="auto" style="width: 400px">

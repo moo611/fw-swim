@@ -446,7 +446,8 @@ const getSelectNos = (sex) => {
 }
 
 const handle = (item, sex) => {
-  //console.log(item)
+  console.log(item)
+  form.cardNo = item
   if (sex == '0') {
     if (state.selectManNos.indexOf(item) !== -1) {
       handleDel(item, sex)
@@ -475,16 +476,16 @@ const handleAdd = (item, sex) => {
 
 
   dialogVisible1.value = true
+  
+
   const user = getUser()
   if (user.role == '1') {
 
     copyValue(user, form)
     form.name = user.nickname
   }
-
   form.cardNo = item
   form.sex = sex
-  console.log(form.cardNo)
 }
 
 const handleDel = (item, sex) => {
@@ -670,7 +671,7 @@ const stopCamera = () => {
   flex-wrap: wrap; */
   /* gap: 10px; */
   padding: 10px;
-  height: 500px;
+  /* height: 500px; */
   box-sizing: border-box;
 }
 
@@ -712,7 +713,9 @@ const stopCamera = () => {
 
 .hollow-border2 {
   border: 1px solid #A97CC4;
-  background-color: white
+  background-image: url(../../assets/door.jpg);
+  background-position: left center;
+  background-size: cover;
 }
 
 .solid-blue2 {

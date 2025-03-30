@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="header">
-      <!-- <h3>水叮当</h3> -->
+      <!-- <h3>军泳智控</h3> -->
       <img src="../assets/swimlogo.jpg" style="width: 80px; height: 80px;" />
       <span style="position: absolute; right: 200px;">当前泳池水温30℃，当前余位：{{ getNum() }}</span>
       <div class="btn-logout">
