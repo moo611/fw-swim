@@ -609,17 +609,32 @@ const takePhoto = () => {
   // 将 canvas 转为 Blob
   canvas.value.toBlob((blob) => {
     if (blob) {
-      const file = new File([blob], "photo.jpg", { type: "image/jpeg" });
-      console.log("拍照生成的文件：", file);
-
-      //stopCamera()
-      // 此时可以将 `file` 用于上传，或其他用途
-      uploadFile(file);
+      blobToBase64(blob).then(res=>{
+        axios.post('admin/faceCheck',{image:res}).then(res2=>{
+          
+          console.log('userId',res2)
+          axios.get('admin/'+res2).then(res=>{
+            copyValue(res,form)
+          })  
+          
+        })
+      })
 
 
     }
   }, "image/jpeg");
 };
+
+
+function blobToBase64(blob) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
+}
+
 
 const uploadFile = (file) => {
   const formData = new FormData();
