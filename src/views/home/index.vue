@@ -16,8 +16,8 @@
       <div class="top-right">
         <span style="text-align: center; font-size: 25px; font-weight: 600;">场馆活动</span>
         <div class="title" v-for="item, index in state.data.list">
-          <h4 class="my-span"> {{ item.title }}</h4>
-          <span class="my-span">{{ item.content }}</span>
+          <h3 class="my-span"> {{ item.title }}</h3>
+          <span class="my-span" style="font-size: 16px;">{{ item.content }}</span>
         </div>
 
       </div>

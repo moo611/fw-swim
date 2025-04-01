@@ -10,6 +10,7 @@ import Monitor from '../views/monitor/index.vue'
 import Home from '../views/home/index.vue'
 import Notify from '../views/notify/index.vue'
 import Time from '../views/time/index.vue'
+import Statics from '../views/statics/index.vue';
 import { getToken } from '../utils/auth'; // 访问缓存的用户名
 
 const routes = [
@@ -33,6 +34,12 @@ const routes = [
         path: 'home',
         name: 'Home',
         component: Home,
+        meta: { requiresAuth: true },
+      },
+      {
+        path: 'statics',
+        name: 'Statics',
+        component: Statics,
         meta: { requiresAuth: true },
       },
       {

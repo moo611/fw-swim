@@ -1,8 +1,9 @@
 <template>
   <div class="main">
     <div class="header">
-      <!-- <h3>军泳智控</h3> -->
+      
       <img src="../assets/swimlogo.jpg" style="width: 80px; height: 80px;" />
+      <h3 style="margin-left: 30px;">军泳智控</h3>
       <span style="position: absolute; right: 200px;">当前泳池水温30℃，当前余位：{{ getNum() }}</span>
       <div class="btn-logout">
         <!-- <span style="margin-right: 50px;">当前用户：{{ curName }}</span>
@@ -105,6 +106,7 @@ const getInfo = () => {
       menus.push({ label: '人员管理', value: '/dashboard/userInfo' })
       menus.push({ label: '公告管理', value: '/dashboard/notify' })
       menus.push({ label: '时段管理', value: '/dashboard/time' })
+      menus.push({ label: '统计', value: '/dashboard/statics' })
       menus.push({ label: '设置', value: '/dashboard/setting' })
 
     } else {
